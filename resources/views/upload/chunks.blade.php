@@ -13,6 +13,13 @@
     <label for="upload__file">Large file</label>
     <input name="file" required id="upload__file" type="file">
 
+    <label for="upload__entity">Entity</label>
+    <select name="entity_id" id="upload__entity">
+        @foreach($entities as $entity)
+            <option value="{{ $entity->id  }}">{{ $entity->name }}</option>
+        @endforeach
+    </select>
+
     <div id="upload__progress"></div>
 
     <button>Upload</button>

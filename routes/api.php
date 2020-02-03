@@ -31,4 +31,11 @@ Route::group([
 
     Route::get('logout', 'AuthController@logout');
     Route::get('user', 'AuthController@user');
+
+    Route::group([
+        'prefix' => 'entities'
+    ], function () {
+        Route::post('/', 'EntitiesController@create')->name('entities.create');
+        Route::get('/', 'EntitiesController@getAll')->name('entities.all');
+    });
 });

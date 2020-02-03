@@ -11,6 +11,6 @@
 |
 */
 
-Route::view('upload', 'upload.chunks')->name('upload.chunks.form');
+Route::get('upload', 'UploadChunksController@form')->name('upload.chunks.form');
 
 Route::post('upload-chunks', 'UploadChunksController@uploadFile')->name('upload.chunks.handler');
