@@ -8,8 +8,6 @@ document.getElementById('upload__form').onsubmit = function (e) {
     const token = this._token.value;
     const entityID = this.entity_id.value;
 
-    console.log(entityID);
-
     const resumable = new Resumable({
         chunkSize: 2 * 1024 * 1024,
         simultaneousUploads: 3,
